@@ -52,7 +52,7 @@ def home():
             db.session.commit()
             return redirect(f"/create/{user_code}")
 
-    collage_url = url_for('static', filename='collage.jpg')
+    collage_url = url_for('static', filename='collage2.jpg')
 
     return f"""
 
