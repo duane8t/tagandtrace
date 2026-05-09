@@ -1,5 +1,5 @@
-Flask
-Flask-SQLAlchemy
+flask
+flask_sqlalchemy
 qrcode
 pillow
 gunicorn
