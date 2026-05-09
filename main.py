@@ -74,7 +74,7 @@ def home():
         else:
             error = "Invalid or already used activation code"
 
-    collage_url = url_for('static', filename='collage.jpg')
+    collage_url = url_for('static', filename='collage2.jpg')
 
     return render_template_string("""
 
