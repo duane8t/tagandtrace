@@ -1,5 +1,0 @@
-flask
-flask_sqlalchemy
-qrcode
-pillow
-gunicorn
