@@ -1,0 +1,65 @@
+# =========================================================
+# REMOVE THIS LINE FROM Profile MODEL
+# =========================================================
+
+email = db.Column(db.String(120))
+
+# =========================================================
+# REMOVE THIS FROM profile = Profile(
+# =========================================================
+
+email=request.form.get("email"),
+
+# =========================================================
+# REMOVE THIS ENTIRE INPUT BLOCK
+# =========================================================
+
+<input
+name="email"
+placeholder="Email Address"
+style="
+width:100%;
+padding:14px;
+margin-top:14px;
+border:none;
+border-radius:12px;
+background:#1e293b;
+color:white;
+"
+>
+
+# =========================================================
+# REMOVE THIS ENTIRE BLOCK
+# =========================================================
+
+email_html = ""
+
+if profile.email:
+    email_html = f'''
+    <a
+    href="mailto:{profile.email}"
+    class="btn"
+    >
+    Email Owner
+    </a>
+    '''
+
+# =========================================================
+# REMOVE THIS LINE
+# =========================================================
+
+{email_html}
+
+# =========================================================
+# KEEP THIS QR GENERATOR
+# =========================================================
+
+profile_url = f"https://www.tagscanreturn.co.uk/profile/{code}"
+
+qr = qrcode.make(profile_url)
+
+os.makedirs("static/qrcodes", exist_ok=True)
+
+qr_path = f"static/qrcodes/{code}.png"
+
+qr.save(qr_path)
